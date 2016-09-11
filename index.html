@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Your Weather</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="styles.css" rel="stylesheet" media="screen">
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+</head>
+
+<body>
+    <header class="jumbotron">
+
+        <h1 class='page-header'>Your Weather <span class=" glyphicon glyphicon-globe"></span></h1>
+
+        <div class='inputWrapper'>
+            <h4 id='userInput'>Enter a city: <input type="text" id="enterCity" placeholder="Enter city..." />
+                <span><input type="button" id="btnGetWeather" class='btn btn-default btn-md' value="Search"></span></h4>
+        </div>
+
+    </header>
+
+    <div class='container'>
+        <div class='row'>
+
+            <div class="col-md-6">
+                <div class='data'>
+                    <div class = 'mainInfo'>
+                        <p id="loc" class="titles"> </p>
+                        <p id="weatherimg" class="titles"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class='data'>
+                    <p class="titles"> <u>Today's Weather Details: </u></p>
+
+                    <span id="desc" class='details'></span>
+                    <img src="images/windy-3.png" class="images"><span id="wind" class='details'></span>
+
+                    <div>
+                        <img src="images/dawn.png" class="images"><span id="srise" class='sun'></span>
+                        <img src="images/sunset.png" class="images"><span id="sset" class='sun'></span>
+                    </div>
+
+                    <div>
+                        <img src='images/temperature.png' class="images"><span id="high" class='temps'></span>
+                        <img src="images/cold-2.png" class="images"><span id="low" class='temps'></span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
