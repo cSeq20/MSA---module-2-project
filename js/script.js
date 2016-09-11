@@ -38,7 +38,7 @@ var Weather = (function () {
     };
     return Weather;
 }());
-// function to setup the default weather when page is first open, using ajax and openweathermap api. It is set to Auckland, NZ.
+// function to setup the weather when page is first open, using ajax and openweathermap api. It is set to Auckland, NZ.
 function setup(url) {
     var show;
     $.ajax({
@@ -60,7 +60,6 @@ function setup(url) {
                 + "  " + data.weather[0].main + ', ' + (data.main.temp).toFixed(0) + "&deg;", "Description : " + data.weather[0].description, 'Wind: ' + data.wind.speed + " m / s", riseFull, setFull, 'High: ' + (data.main.temp_max).toFixed(0) + " &deg;", 'Low: ' + (data.main.temp_min).toFixed(0) + ' &deg;');
             show = weather.getWeather();
             $('#enterCity').val('');
-            
         }
     });
     return show;
@@ -74,6 +73,5 @@ $(document).ready(function () {
         var apiKey = '&appid=65c0549b966f6aa73861d1b3556f9ccd&units=metric';
         var fullURL = api + getData + apiKey;
         setup(fullURL);
-        
     });
 });
