@@ -4,8 +4,8 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Indie Flower", cursive; 
-  font-weight: bold;}
+  font-family: "Indie Flower", cursive;
+  font-weight: bold; }
 
 .page-header, .inputWrapper {
   text-align: center; }
@@ -18,8 +18,7 @@ body {
   height: 210px; }
 
 .titles {
-  font-size: 1.93em;
-  text-align: center; }
+  font-size: 1.93em; }
 
 #enterCity {
   width: 40%; }
@@ -29,9 +28,11 @@ body {
 
 .btn-md {
   width: 10%;
+  font-weight: bold;
   font-size: 18px; }
 
 .details, .sun, .temps {
+  font-weight: bold;
   font-size: 18px;
   text-align: left;
   padding-left: 0.5em; }
@@ -40,9 +41,9 @@ body {
   padding-right: 5em; }
 
 .data {
-  text-align: center;
-  letter-spacing: 2px;
   background-color: rgba(255, 255, 242, 0.5);
+  letter-spacing: 2px;
+  text-align: center;
   border: solid lightgray;
   border-radius: 1em; }
 

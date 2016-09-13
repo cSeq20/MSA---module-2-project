@@ -12,6 +12,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
     font-family: $primary-font;
+    font-weight: $dft-font-bold;
 }
 
 .page-header, .inputWrapper {
@@ -27,9 +28,8 @@ body {
 }
 
 .titles{
-    font-size: 2em;
-    font-weight: $dft-font-bold;
-    text-align: center;
+    font-size: 1.93em;
+    
 }
 
 #enterCity {
@@ -37,7 +37,6 @@ body {
 }
 
 #userInput {
-    font-weight: $dft-font-bold;
     font-size: 25px;
 }
 
@@ -60,6 +59,8 @@ body {
 
 .data{
     background-color: $primary-color;
+    letter-spacing: 2px;
+    text-align: center;
     border: solid lightgray;
     border-radius: 1em;
 }
