@@ -1,5 +1,5 @@
 // The default variable for the openWeathermap api to query. IT is set to Auckland.
-var dftURL: string = '//api.openweathermap.org/data/2.5/weather?q=auckland&appid=65c0549b966f6aa73861d1b3556f9ccd&units=metric';
+var dftURL: string = 'http://api.openweathermap.org/data/2.5/weather?q=auckland&appid=65c0549b966f6aa73861d1b3556f9ccd&units=metric';
 
 // Date variables for sun rise.
 var drise: Date;
@@ -86,7 +86,7 @@ $(document).ready(function () {
 
     searchBtn.addEventListener("click", function () {
         var getData = $("#enterCity").val();
-        var api: string = '//api.openweathermap.org/data/2.5/weather?q='
+        var api: string = 'http://api.openweathermap.org/data/2.5/weather?q='
         var apiKey: string = '&appid=65c0549b966f6aa73861d1b3556f9ccd&units=metric';
 
         var fullURL = api + getData + apiKey;
