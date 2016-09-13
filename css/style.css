@@ -5,9 +5,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: "Indie Flower", cursive;
-  font-weight: bold; }
-
-.page-header, .inputWrapper {
+  font-weight: bold;
+  letter-spacing: 2px;
   text-align: center; }
 
 .jumbotron {
@@ -41,8 +40,6 @@ body {
 
 .data {
   background-color: rgba(255, 255, 242, 0.5);
-  letter-spacing: 2px;
-  text-align: center;
   border: solid lightgray;
   border-radius: 1em; }
 
