@@ -8,15 +8,18 @@ searchBtn.addEventListener("click", function () {
         }
         else {
             $('.col-md-6').show();
-            $('#loc').html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
-            $('#weatherimg').html("<img src=images/" + data.query.results.channel.item.condition.code + ".png class='imageMain'>"
-                + "  " + data.query.results.channel.item.condition.text
-                + ", " + data.query.results.channel.item.condition.temp + " " + data.query.results.channel.units.temperature);
-            $('#wind').html(data.query.results.channel.wind.speed + " " + data.query.results.channel.units.speed);
-            $('#srise').html(data.query.results.channel.astronomy.sunrise);
-            $('#sset').html(data.query.results.channel.astronomy.sunset);
-            $('#high').html(data.query.results.channel.item.forecast[0].high + " " + data.query.results.channel.units.temperature);
-            $('#low').html(data.query.results.channel.item.forecast[0].low + " " + data.query.results.channel.units.temperature);
+            setup(data);
         }
     });
 });
+function setup(data) {
+    $('#loc').html(data.query.results.channel.location.city + ", " + data.query.results.channel.location.country);
+    $('#weatherimg').html("<img src=images/" + data.query.results.channel.item.condition.code + ".png class='imageMain'>"
+        + "  " + data.query.results.channel.item.condition.text
+        + ", " + data.query.results.channel.item.condition.temp + " &#8451;");
+    $('#wind').html(data.query.results.channel.wind.speed + " " + data.query.results.channel.units.speed);
+    $('#srise').html(data.query.results.channel.astronomy.sunrise);
+    $('#sset').html(data.query.results.channel.astronomy.sunset);
+    $('#high').html(data.query.results.channel.item.forecast[0].high + " &#8451;");
+    $('#low').html(data.query.results.channel.item.forecast[0].low + " &#8451;");
+}
