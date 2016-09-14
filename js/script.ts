@@ -13,7 +13,6 @@ searchBtn.addEventListener("click", function () {
                 $('#daily').show();
                 $('#moreDetails').css("visibility", "visible");
                 setup(data);
-
             }
 
         });
@@ -37,7 +36,6 @@ var moreInfo = $('#moreDetails')[0];        // reference button to get 5 day for
 moreInfo.addEventListener("click", function () {
     $('#forecast').toggle();    // shows / hides the extra information
     changeButton();         // calls the function changeButton to change value of button.
-
     var city = $('#enterCity').val();
     $.get('https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where u="c" and woeid in (select woeid from geo.places(1) where text="' + city + '")&format=json',
         function (data) {

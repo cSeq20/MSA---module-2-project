@@ -14,19 +14,17 @@
 
 <body>
     <header class="jumbotron">
-
         <h1 class='page-header'>Your Weather <span class=" glyphicon glyphicon-globe"></span></h1>
         <div class='inputWrapper'>
             <h4 id='userInput'>Enter a city: <input type="text" id="enterCity" placeholder="Enter city..." />
                 <span><input type="button" id="btnGetWeather" class='btn btn-default btn-md' value="Search"></span></h4>
         </div>
-
     </header>
 
     <div class='container'>
         <div class='row' id='daily' hidden>
 
-            <div class="col-md-6" >
+            <div class="col-md-6">
                 <div class='data'>
                     <div class='mainInfo'>
                         <p id="loc" class="titles"> </p>
@@ -35,12 +33,11 @@
                 </div>
             </div>
 
-            <div class="col-md-6" >
+            <div class="col-md-6">
                 <div class='data'>
                     <p class="titles">
                         <u>Today's Weather Details: </u>
                     </p>
-
                     <img src="./images/compass-1.png" class="images"> Wind Speed: <span id="wind" class='details'></span>
 
                     <div>
@@ -52,21 +49,34 @@
                         <img src='./images/temperature.png' class="images"><span id="high" class='temps'></span>
                         <img src="./images/cold-2.png" class="images"><span id="low" class='temps'></span>
                     </div>
-
                 </div>
             </div>
 
         </div>
         <div class='row' id="forecast" hidden>
-            <div class="col-sm-2" id='day1'></div>
-            <div class="col-sm-2" id='day2'></div>
-            <div class="col-sm-2" id='day3'></div>
-            <div class="col-sm-2" id='day4'></div>
-            <div class="col-sm-2" id='day5'></div>      
+            <div class='center'>
+                <div class="col-sm-2" id='day1'></div>
+                <div class="col-sm-2" id='day2'></div>
+                <div class="col-sm-2" id='day3'></div>
+                <div class="col-sm-2" id='day4'></div>
+                <div class="col-sm-2" id='day5'></div>
+            </div>
         </div>
-       <input type="button" id="moreDetails" class='btn btn-default btn-md' value="Get 5 Day Forecast">
-
+        <input type="button" id="moreDetails" class='btn btn-default btn-md' value="Get 5 Day Forecast">
     </div>
+
+    <footer class="footer text-muted">
+        <div class="innerfooter tac">
+            <div class="footer-content-left">
+                <span>Created by Chris Sequeira </span>
+            </div>
+            <div class="footer-content-right">
+                <span>
+				<a href="https://www.yahoo.com/?ilc=401" class="cldclr" target="_blank"><img class="brand" src="https://poweredby.yahoo.com/purple.png" /></a>
+			    </span>
+            </div>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
