@@ -24,9 +24,9 @@
     </header>
 
     <div class='container'>
-        <div class='row'>
+        <div class='row' id='daily' hidden>
 
-            <div class="col-md-6" hidden>
+            <div class="col-md-6" >
                 <div class='data'>
                     <div class='mainInfo'>
                         <p id="loc" class="titles"> </p>
@@ -35,13 +35,13 @@
                 </div>
             </div>
 
-            <div class="col-md-6" hidden>
+            <div class="col-md-6" >
                 <div class='data'>
                     <p class="titles">
                         <u>Today's Weather Details: </u>
                     </p>
 
-                    <img src="./images/compass-1.png" class="images">  Wind Speed: <span id="wind" class='details'></span>
+                    <img src="./images/compass-1.png" class="images"> Wind Speed: <span id="wind" class='details'></span>
 
                     <div>
                         <img src="./images/dawn.png" class="images"><span id="srise" class='sun'></span>
@@ -57,6 +57,15 @@
             </div>
 
         </div>
+        <div class='row' id="forecast" hidden>
+            <div class="col-sm-2" id='day1'></div>
+            <div class="col-sm-2" id='day2'></div>
+            <div class="col-sm-2" id='day3'></div>
+            <div class="col-sm-2" id='day4'></div>
+            <div class="col-sm-2" id='day5'></div>      
+        </div>
+       <input type="button" id="moreDetails" class='btn btn-default btn-md' value="Get 5 Day Forecast">
+
     </div>
 
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>

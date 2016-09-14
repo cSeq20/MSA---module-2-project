@@ -54,4 +54,19 @@ body {
   height: 50px;
   width: 50px; }
 
+#moreDetails {
+  border-radius: 10px;
+  margin-top: 20px;
+  visibility: hidden;
+  width: 25%; }
+
+.col-sm-2 {
+  background: rgba(255, 255, 242, 0.5);
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-right: 10px; }
+
+#day1 {
+  margin-left: 8%; }
+
 /*# sourceMappingURL=style.css.map */
