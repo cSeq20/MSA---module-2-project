@@ -30,7 +30,7 @@ function setup(data) {
 // Function that gets the forecast for five days.
 var moreInfo = $('#moreDetails')[0]; // reference button to get 5 day forecast.
 moreInfo.addEventListener("click", function () {
-    hideExtra();
+    $('#forecast').toggle(); // shows / hides the extra information
     changeButton(); // calls the function changeButton to change value of button.
     var city = $('#enterCity').val();
     $.get('https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where u="c" and woeid in (select woeid from geo.places(1) where text="' + city + '")&format=json', function (data) {
