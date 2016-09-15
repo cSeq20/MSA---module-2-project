@@ -1,4 +1,5 @@
 var searchBtn = $('#btnGetWeather')[0];
+var btnValue = $('#moreDetails').attr('value'); // get value of forecast button.
 // queries api when search button is pressed and retrieves data to be displayed on webpage.
 searchBtn.addEventListener("click", function () {
     var city = $('#enterCity').val();
@@ -42,7 +43,6 @@ moreInfo.addEventListener("click", function () {
 });
 // function that changes value of button to show less / get 5 day forecast.
 function changeButton() {
-    var btnValue = $('#moreDetails').attr('value'); // get value of button.
     // Changes value of button according to its current value.
     if (btnValue == 'Get 5 Day Forecast') {
         $('#moreDetails').prop('value', 'Show less');
