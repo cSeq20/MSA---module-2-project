@@ -13,7 +13,7 @@ searchBtn.addEventListener("click", function () {
                 $('#daily').show();
                 $('#moreDetails').css("visibility", "visible");
                 setup(data);
-                hideExtra();
+                
             }
 
         });
@@ -59,10 +59,4 @@ function changeButton(): void {
         $('#moreDetails').prop('value', 'Get 5 Day Forecast');
     }
 }
-
-// function to hide the 5 day forecast if open.
-function hideExtra(): void {
-    $('#forecast').css("visibility", "hidden");    // shows / hides the extra information
-}
-
 
