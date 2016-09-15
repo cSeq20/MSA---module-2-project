@@ -1,5 +1,4 @@
 var searchBtn = $('#btnGetWeather')[0];
-var btnValue = $('#moreDetails').attr('value'); // get value of forecast button.
 // queries api when search button is pressed and retrieves data to be displayed on webpage.
 searchBtn.addEventListener("click", function () {
     var city = $('#enterCity').val();
@@ -12,6 +11,7 @@ searchBtn.addEventListener("click", function () {
             $('#daily').show();
             $('#moreDetails').css("visibility", "visible");
             setup(data);
+            hideExtra();
         }
     });
 });
@@ -30,7 +30,7 @@ function setup(data) {
 // Function that gets the forecast for five days.
 var moreInfo = $('#moreDetails')[0]; // reference button to get 5 day forecast.
 moreInfo.addEventListener("click", function () {
-    $('#forecast').toggle(); // shows / hides the extra information
+    hideExtra();
     changeButton(); // calls the function changeButton to change value of button.
     var city = $('#enterCity').val();
     $.get('https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where u="c" and woeid in (select woeid from geo.places(1) where text="' + city + '")&format=json', function (data) {
@@ -43,6 +43,7 @@ moreInfo.addEventListener("click", function () {
 });
 // function that changes value of button to show less / get 5 day forecast.
 function changeButton() {
+    var btnValue = $('#moreDetails').attr('value'); // get value of forecast button.
     // Changes value of button according to its current value.
     if (btnValue == 'Get 5 Day Forecast') {
         $('#moreDetails').prop('value', 'Show less');
@@ -50,4 +51,8 @@ function changeButton() {
     else {
         $('#moreDetails').prop('value', 'Get 5 Day Forecast');
     }
+}
+// function to hide the 5 day forecast if open.
+function hideExtra() {
+    $('#forecast').css("visibility", "hidden"); // shows / hides the extra information
 }
