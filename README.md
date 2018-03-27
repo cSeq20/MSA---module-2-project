@@ -1,3 +1,3 @@
-# MSA---module-2-project
+Weather web applications
 
-Small Weather Applications utilizing the Yahoo Weather API.
+Small Weather Application utilizing the Yahoo Weather API.
